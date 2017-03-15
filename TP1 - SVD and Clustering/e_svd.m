@@ -44,7 +44,7 @@ imshow(In);
 MSE_AWGN = MSE(I,In)
 
 
-[U, S, V]  = svd(In);
+[U, S, V]   = svd(In);
 figure();
 
 x_ax = 1:kmax;

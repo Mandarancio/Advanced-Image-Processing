@@ -22,8 +22,13 @@
 ## Author: Martino <martino@martino-Link>
 ## Created: 2017-03-09
 
-function [i] = stdWMark (I, sigma,D=10)
-  nvf = NVF(I,D);
-  wm = sigma*randn(size(I));
-  i = I+(1-nvf).*wm;
+function [i] = stdWMark (I, sigma,D=10, nvf_enable = true)
+  if (nvf_enable)
+    nvf = NVF(I,D);
+    wm = sigma*randn(size(I));
+    i = I+(1-nvf).*wm;
+   elseif
+    wm = sigma*randn(size(I));
+    i = I+wm;
+  endif
 endfunction
