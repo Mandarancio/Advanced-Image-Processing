@@ -2,7 +2,7 @@
 clear all;
 close all;
 
-%graphics_toolkit ('gnuplot')
+graphics_toolkit ('gnuplot')
 
 pkg load image;
 
@@ -21,18 +21,20 @@ mses_yes = [];
 for n = [10,20,30,40]
   wi_nonvf = stdWMark(I,n,2,false);
   subplot(4,2,counter); subimage(wi_nonvf);
-  title(strcat("NO NVF Image with watermark variance of  ",num2str(n)));
+  title(strcat("NO NVF, var: ",num2str(n)));
   axis image;
-  %display(strcat("NO NVF Image : ",num2str(n)));
+  axis off;
+  %display(strcat("NO NVF, variance: ",num2str(n)));
   mse = MSE(I,wi_nonvf);
   %display(mse)
   mses_no(end+1)=mse;
  
   wi_nvf = stdWMark(I,n,D,true);
   subplot(4,2,counter+1); subimage(wi_nvf);
-  title(strcat("NVF Image with watermark variance of  ",num2str(n)));
+  title(strcat("NVF, var:",num2str(n)));
   axis image;
-  %display(strcat("NVF Image : ",num2str(n)));
+  axis off;
+  %display(strcat("NVF, variance : ",num2str(n)));
   mse = MSE(I,wi_nvf);
   %display(mse)
   mses_yes(end+1) = mse;

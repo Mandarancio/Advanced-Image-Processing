@@ -23,7 +23,7 @@ function vislabels(L)
 % black text will be visible against both background and foreground
 % pixels.
 
-background_shade = 200;
+background_shade = 150;
 foreground_shade = 240;
 I = zeros(size(L), 'uint8');
 I(L == 0) = background_shade;
