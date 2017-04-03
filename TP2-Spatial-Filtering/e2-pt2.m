@@ -31,3 +31,11 @@ imshow(i);
 i = sharpen(I,2);
 figure()
 imshow(i);
+
+i = unsharpering(I);
+figure();
+imshow(i);
+
+i = unsharpering(I,2);
+figure();
+imshow(i);
