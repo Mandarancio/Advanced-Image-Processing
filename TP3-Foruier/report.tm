@@ -178,9 +178,8 @@
   identify better the frequency to filter I chose to project the magnitude on
   the <with|font-shape|italic|x> and <with|font-shape|italic|y> axis:
 
-  <\big-figure|<image|plots/tp3_e6_filters.png|700px|462px||>>
-    <with|font-shape|italic|low pass filter> and
-    <with|font-shape|italic|notch filter>
+  <\big-figure|<image|plots/tp3_e6_plt3.png|700px|506px||>>
+    projection of the magnitude
   </big-figure>
 
   The axis normalization is done using the function
@@ -202,8 +201,10 @@
 
   The resulting filters are shown in the following figure:
 
-  <\big-figure|<image|plots/tp3_e6_plt3.png|700px|506px||>>
-    projection of the magnitude
+  <\big-figure|<image|plots/tp3_e6_filters.png|700px|462px||>>
+    <with|font-shape|italic|low pass filter> and
+    <with|font-shape|italic|notch filter> and magnetude of
+    <with|font-shape|italic|I(u)>
   </big-figure>
 
   Now that the filters are defined we have to combine it together, to do so
@@ -320,7 +321,7 @@
       </tuple|<pageref|auto-18>>
 
       <\tuple|normal>
-        projection of the magnetude
+        projection of the magnitude
       </tuple|<pageref|auto-19>>
 
       <\tuple|normal>
